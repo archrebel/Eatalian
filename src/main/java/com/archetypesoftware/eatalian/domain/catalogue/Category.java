@@ -10,6 +10,7 @@ import java.time.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import com.fasterxml.jackson.annotation.*;
 
 
 // ----------- << imports@AAAAAAFs15c0YX/A4As= >>
@@ -52,6 +53,7 @@ public class Category {
 
     @ManyToOne
     @JoinColumn(name = "parent_id")
+    @JsonIgnore
     // ----------- << attribute.annotations@AAAAAAFs15lm2oC8Iwc= >>
     // ----------- >>
     private Category parent;
@@ -182,5 +184,13 @@ public class Category {
     }
 
 // ----------- << class.extras@AAAAAAFs15c0YX/A4As= >>
+
+    public Category() {
+    }
+
+    public Category(@NotNull String name) {
+        this.name = name;
+    }
+
 // ----------- >>
 }

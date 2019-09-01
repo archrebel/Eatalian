@@ -55,6 +55,10 @@ public class CurrencyAmount {
         return new CurrencyAmount(amount, currency);
     }
 
+    public static CurrencyAmount of(long amount, Currency currency) {
+        return of(BigDecimal.valueOf(amount), currency);
+    }
+
     public CurrencyAmount() {
     }
 

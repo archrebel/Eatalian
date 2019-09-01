@@ -10,6 +10,7 @@ import java.time.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import com.fasterxml.jackson.annotation.*;
 
 import com.archetypesoftware.eatalian.domain.monetary.CurrencyAmount;
 // ----------- << imports@AAAAAAFs15dY/X/qZkk= >>
@@ -69,6 +70,7 @@ public class Product {
     @NotNull
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @JsonIgnore
     // ----------- << attribute.annotations@AAAAAAFs15idfoA7+9A= >>
     // ----------- >>
     private Category category;
@@ -150,5 +152,13 @@ public class Product {
     }
 
 // ----------- << class.extras@AAAAAAFs15dY/X/qZkk= >>
+
+    public Product() {
+    }
+
+    public Product(@NotNull String name) {
+        this.name = name;
+    }
+
 // ----------- >>
 }
