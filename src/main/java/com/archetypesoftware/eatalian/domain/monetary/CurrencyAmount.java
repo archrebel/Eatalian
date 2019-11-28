@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.monetary;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -17,6 +19,7 @@ import java.math.BigDecimal;
 // ----------- >>
 
 @Embeddable
+@ApiModel(description = "")
 // ----------- << class.annotations@AAAAAAFs12maHX94Pv8= >>
 // ----------- >>
 public class CurrencyAmount {

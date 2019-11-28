@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.orders;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import com.fasterxml.jackson.annotation.*;
@@ -26,6 +28,7 @@ import com.archetypesoftware.eatalian.domain.monetary.CurrencyAmount;
         @JsonSubTypes.Type(value = GroupRequest.class, name = "groupRequest"),
         @JsonSubTypes.Type(value = ProductRequest.class, name = "productRequest")
 })
+@ApiModel(description = "")
 // ----------- << class.annotations@AAAAAAFs1+wif4ratzw= >>
 // ----------- >>
 public abstract class Request {

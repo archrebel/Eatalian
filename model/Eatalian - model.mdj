@@ -64,7 +64,7 @@
 													},
 													"visible": false,
 													"font": "Arial;11;0",
-													"left": 792,
+													"left": 764,
 													"top": -48,
 													"height": 11
 												},
@@ -75,9 +75,9 @@
 														"$ref": "AAAAAAFs1qBKjH6SBGg="
 													},
 													"font": "Arial;11;1",
-													"left": 515,
+													"left": 501,
 													"top": 160,
-													"width": 75,
+													"width": 113,
 													"height": 11,
 													"text": "domain"
 												},
@@ -89,7 +89,7 @@
 													},
 													"visible": false,
 													"font": "Arial;11;0",
-													"left": 792,
+													"left": 764,
 													"top": -48,
 													"width": 70.91455078125,
 													"height": 11,
@@ -103,16 +103,18 @@
 													},
 													"visible": false,
 													"font": "Arial;11;0",
-													"left": 792,
-													"top": -48,
+													"left": 487,
+													"top": 173,
+													"width": 187.88623046875,
 													"height": 11,
+													"text": "{archetype.doc.docFormat=\"swagger\"}",
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 510,
+											"left": 496,
 											"top": 153,
-											"width": 85,
+											"width": 123,
 											"height": 23,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAFs1qBKjH6TAm8="
@@ -130,10 +132,11 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 510,
+									"left": 496,
 									"top": 138,
-									"width": 85,
+									"width": 123,
 									"height": 73,
+									"showProperty": false,
 									"nameCompartment": {
 										"$ref": "AAAAAAFs1qBKjH6SBGg="
 									}
@@ -8892,6 +8895,18 @@
 											]
 										}
 									]
+								}
+							],
+							"tags": [
+								{
+									"_type": "Tag",
+									"_id": "AAAAAAFurm7+sMqfPrg=",
+									"_parent": {
+										"$ref": "AAAAAAFs1qBKi36PXRc="
+									},
+									"name": "archetype.doc.docFormat",
+									"kind": "string",
+									"value": "swagger"
 								}
 							]
 						},

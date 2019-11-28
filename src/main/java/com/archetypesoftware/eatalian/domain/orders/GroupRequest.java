@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.orders;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -17,6 +19,7 @@ import java.math.BigDecimal;
 // ----------- >>
 
 @Entity
+@ApiModel(description = "")
 // ----------- << class.annotations@AAAAAAFs1+ynKYsFAAA= >>
 // ----------- >>
 public class GroupRequest extends Request {
@@ -65,6 +68,7 @@ public class GroupRequest extends Request {
         return 447;
     }
 
+    @Override
     // ----------- << method.annotations@AAAAAAFs2EGM7RsanYM= >>
     // ----------- >>
     public CurrencyAmount getTotalPrice() {

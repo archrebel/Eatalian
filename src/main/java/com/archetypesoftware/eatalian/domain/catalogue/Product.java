@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.catalogue;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import com.fasterxml.jackson.annotation.*;
@@ -16,11 +18,8 @@ import com.archetypesoftware.eatalian.domain.monetary.CurrencyAmount;
 // ----------- << imports@AAAAAAFs15dY/X/qZkk= >>
 // ----------- >>
 
-/**
-* A Product sold by our company.
-*/
-
 @Entity
+@ApiModel(description = "A Product sold by our company.")
 // ----------- << class.annotations@AAAAAAFs15dY/X/qZkk= >>
 // ----------- >>
 public class Product {
@@ -30,47 +29,35 @@ public class Product {
     // ----------- >>
     private Long id;
 
-    /**
-    * The name of the product.
-    */
-
     @NotNull
     @Column(nullable = false)
+    @ApiModelProperty(value = "The name of the product.", required = true)
     // ----------- << attribute.annotations@AAAAAAFs15fEsYAjHHA= >>
     // ----------- >>
     private String name;
 
-    /**
-    * Product description.
-    */
-
     @NotNull
     @Column(nullable = false)
+    @ApiModelProperty(value = "Product description.", required = true)
     // ----------- << attribute.annotations@AAAAAAFs15fVNoAq1rs= >>
     // ----------- >>
     private String description;
-
-    /**
-    * Product price.
-    */
 
     @Embedded
     @AttributeOverrides({
         @AttributeOverride(name="amount", column = @Column(name = "price_amount")),
         @AttributeOverride(name="currency", column = @Column(name = "price_currency"))
     })
+    @ApiModelProperty(value = "Product price.", required = true)
     // ----------- << attribute.annotations@AAAAAAFs15gZFYAxtuc= >>
     // ----------- >>
     private CurrencyAmount price;
-
-    /**
-    * Product category.
-    */
 
     @NotNull
     @ManyToOne
     @JoinColumn(name = "category_id")
     @JsonIgnore
+    @ApiModelProperty(value = "Product category.", required = true)
     // ----------- << attribute.annotations@AAAAAAFs15idfoA7+9A= >>
     // ----------- >>
     private Category category;

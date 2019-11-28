@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.accounts;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -15,11 +17,8 @@ import javax.validation.constraints.*;
 // ----------- << imports@AAAAAAFs168ImoRaOvU= >>
 // ----------- >>
 
-/**
-* Customer's account that he uses to interact with our store.
-*/
-
 @Entity
+@ApiModel(description = "Customer's account that he uses to interact with our store.")
 // ----------- << class.annotations@AAAAAAFs168ImoRaOvU= >>
 // ----------- >>
 public class Account {
@@ -52,12 +51,9 @@ public class Account {
     // ----------- >>
     private String lastName;
 
-    /**
-    * Contact phone number, used in case there is a need to contact the customer.
-    */
-
     @NotNull
     @Column(nullable = false)
+    @ApiModelProperty(value = "Contact phone number, used in case there is a need to contact the customer.", required = true)
     // ----------- << attribute.annotations@AAAAAAFs19KSvInmmzY= >>
     // ----------- >>
     private String contactPhone;

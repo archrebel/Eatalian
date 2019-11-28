@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.accounts;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -15,11 +17,8 @@ import javax.validation.constraints.*;
 // ----------- << imports@AAAAAAFs16/2roSy+FA= >>
 // ----------- >>
 
-/**
-* Address of the customer.
-*/
-
 @Embeddable
+@ApiModel(description = "Address of the customer.")
 // ----------- << class.annotations@AAAAAAFs16/2roSy+FA= >>
 // ----------- >>
 public class Address {

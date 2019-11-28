@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.catalogue;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import com.fasterxml.jackson.annotation.*;
@@ -16,11 +18,8 @@ import com.fasterxml.jackson.annotation.*;
 // ----------- << imports@AAAAAAFs15c0YX/A4As= >>
 // ----------- >>
 
-/**
-* A set of products belongs to a Category, while Categories can additionaly belong to a parent Category.
-*/
-
 @Entity
+@ApiModel(description = "A set of products belongs to a Category, while Categories can additionaly belong to a parent Category.")
 // ----------- << class.annotations@AAAAAAFs15c0YX/A4As= >>
 // ----------- >>
 public class Category {

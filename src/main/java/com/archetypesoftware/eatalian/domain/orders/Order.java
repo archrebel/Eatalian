@@ -8,6 +8,8 @@ package com.archetypesoftware.eatalian.domain.orders;
 import java.util.*;
 import java.time.*;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -18,6 +20,7 @@ import com.archetypesoftware.eatalian.domain.accounts.Address;
 
 @Entity
 @Table(name = "customers_orders")
+@ApiModel(description = "")
 // ----------- << class.annotations@AAAAAAFs1+t+RIp8aYA= >>
 // ----------- >>
 public class Order {
